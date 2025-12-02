@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Scroll Through 3D Circle Field</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../normalize.css" />
+</head>
+
+<body>
+    <section class="start">
+        <h1 class="start__title">THE BLUR BETWEEN</h1>
+        <p class="start__tagline">What you see through the sight you forget</p>
+        <button class="start__btn">PRESS TO ENTER</button>
+    </section>
+
+    <section class="loading-screen hidden">
+        <h2>Loading models...</h2>
+        <p>Please wait while we prepare the experience</p>
+    </section>
+
+    <div class="hidden scroll-container">
+        <div class="promille">
+            <p class="promille__counter">0.0‰</p>
+            <p class="promille__text">PROMILLE</p>
+            <p class="promille__unit"> <span class="promille__unit__counter">0</span> units of alcohol</p>
+        </div>
+        <section class="panel panel-1 visually-hidden">
+            <p>- Move your head -</p>
+        </section>
+
+        <section class="panel panel-2 visually-hidden">
+            <p>-Raise your hand. <br>Try picking up the red dot and put it in its place-</p>
+            <p class="rush-warning hidden">You drank too much to rush this, focus and go slowly</p>
+        </section>
+
+        <section class="panel panel-2-5 visually-hidden">
+            <p>Move your head again, notice the difference? fun right?</p>
+        </section>
+
+        <section class="panel panel-3 visually-hidden">
+            <p>-There is an emergency, grab the red dot as soon as you see him-</p>
+            <p class="hidden">what are you waiting for!</p>
+            <p class="hidden">Just grab the green dot!</p>
+            <div class="emergency-timer hidden">
+                <span class="timer-seconds">10.0</span>s
+            </div>
+        </section>
+
+        <section class="panel panel-4 visually-hidden">
+            <p>You see the emergency, but your body fails to respond in time. <br> In situations like these, fractions
+                of seconds can mean the difference between safety and harm.
+                <br>Alcohol disrupts those chances to act swiftly.
+            </p>
+            <p>Respect your limits and understand the effects alcohol has on your abilities. <br> Even when you're not
+                driving.</p>
+        </section>
+
+
+    </div>
+
+    <div class="depth">
+        <canvas id="field"></canvas>
+        <div class="spacer"></div>
+    </div>
+    <canvas id="canvas" class="fancy-shadow"></canvas>
+    <div id="state" style="position: fixed; top: 10px; left: 10px; color: white; z-index: 1000;"></div>
+    <div id="error" style="position: fixed; top: 40px; left: 10px; color: red; z-index: 1000; display: none;"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
